@@ -249,9 +249,9 @@ Example:
 
 Repo:
 
-GitHub repository: [alx-higher_level_programming](../)
-Directory: [0x00-python-hello_world](./)
-File: [3-print_number.py](./3-print_number.py)
+- GitHub repository: [alx-higher_level_programming](../)
+- Directory: [0x00-python-hello_world](./)
+- File: [3-print_number.py](./3-print_number.py)
 
 **4. Print float**
 
@@ -272,9 +272,9 @@ Example:
 
 Repo:
 
-GitHub repository: [alx-higher_level_programming](../)
-Directory: [0x00-python-hello_world](./)
-File: [4-print_float.py](./4-print_float.py)
+- GitHub repository: [alx-higher_level_programming](../)
+- Directory: [0x00-python-hello_world](./)
+- File: [4-print_float.py](./4-print_float.py)
 
 **5. Print string**
 
@@ -298,6 +298,6 @@ Example:
 
 Repo:
 
-GitHub repository: [alx-higher_level_programming](../)
-Directory: [0x00-python-hello_world](./)
-File: [5-print_string.py](./5-print_string.py)
+- GitHub repository: [alx-higher_level_programming](../)
+- Directory: [0x00-python-hello_world](./)
+- File: [5-print_string.py](./5-print_string.py)
