@@ -1,9 +1,10 @@
 #!/usr/bin/python3
 """ defines a class named Square """
 
+
 class Square:
     """ defines a function named __init__ """
-    def __init__(self, size = 0):
+    def __init__(self, size=0):
         """ if statement """
         if type(size) != int:
             """ raise an error """
