@@ -1,0 +1,49 @@
+=====================
+=== 0-add_integer ===
+=====================
+
+imports add_integer function
+----------------------------
+	>>> add_integer = __import__('0-add_integer').add_integer
+
+checks with two integer numbers
+-------------------------------
+	>>> add_integer(1, 1)
+	2
+
+checks with one integer number
+------------------------------
+	>>> add_integer(1)
+	99
+
+checks with one negative integer number
+---------------------------------------
+	>>> add_integer(-1)
+	97
+
+checks with two negative integer numbers
+----------------------------------------
+	>>> add_integer(-1, -1)
+	-2
+
+checks with one string and one integer number
+---------------------------------------------
+	>>> add_integer('something', 1)
+	Traceback (most recent call last):
+	TypeError: a must be an integer
+
+checks with one integer number and one string
+---------------------------------------------
+	>>> add_integer(1, 'something')
+	Traceback (most recent call last):
+	TypeError: b must be an integer
+
+checks with one integer number and one float number
+---------------------------------------------------
+	>>> add_integer(1, 1.5)
+	2
+
+checks with float and integer number
+------------------------------------
+	>>> add_integer(1.5, 1)
+	2
