@@ -13,9 +13,9 @@ class Rectangle:
 
     def __str__(self):
         """ returns series of '#' to form a rectangle """
-        ret = ''
         if self.__width == 0 and self.__height == 0:
-            return ret
+            return ''
+        ret = ''
         for i in range(self.__height):
             for j in range(self.__width):
                 ret += '#'
@@ -51,6 +51,7 @@ class Rectangle:
         self.__height = value
 
     def area(self):
+        """ calculates and returns area """
         return self.__width * self.__height
 
     def perimeter(self):
