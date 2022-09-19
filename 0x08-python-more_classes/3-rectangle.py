@@ -7,13 +7,13 @@ Defines Rectangle class
 class Rectangle:
     """ Rectangle """
     def __init__(self, width=0, height=0):
-        """ initizie width and height """
+        """ initialize """
         self.width = width
         self.height = height
 
     def __str__(self):
-        """ returns series of '#' to form a rectangle """
-        if self.__width == 0 and self.__height == 0:
+        """ returns set of rectangle """
+        if self.__height == 0 or self.__width == 0:
             return ''
         ret = ''
         for i in range(self.__height):
@@ -51,11 +51,11 @@ class Rectangle:
         self.__height = value
 
     def area(self):
-        """ calculates and returns area """
+        """ calculates area of a rectangle """
         return self.__width * self.__height
 
     def perimeter(self):
-        """ calculates the perimeter of a Rectangle """
-        if self.__width == 0 or self.__height == 0:
+        """ calculates the perimeter of a rectangle """
+        if self.__height == 0 or self.__width == 0:
             return 0
         return 2 * (self.__width + self.__height)
