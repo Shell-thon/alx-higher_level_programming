@@ -8,8 +8,8 @@ class Rectangle:
     """ Rectangle """
     def __init__(self, width=0, height=0):
         """ initizie width and height """
-        self.height = height
         self.width = width
+        self.height = height
 
     def __str__(self):
         """ returns series of '#' to form a rectangle """
