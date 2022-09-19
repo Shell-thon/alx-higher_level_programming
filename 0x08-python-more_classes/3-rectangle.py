@@ -20,7 +20,7 @@ class Rectangle:
             for j in range(self.__width):
                 ret += '#'
             ret += '\n'
-        return ret
+        return ret[:-1]
 
     @property
     def width(self):
