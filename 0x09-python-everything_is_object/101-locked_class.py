@@ -3,10 +3,11 @@
 LockedClass class
 """
 
+
 class LockedClass:
     """ setattr """
-    def __setattr__(self, attribute, value):
-        if attribute == "first_name":
-            self.__dict__[attribute] = value
+    def __setattr__(self, atr, value):
+        if atr == "first_name":
+            self.__dict__[atr] = value
         else:
-            raise AttributeError("'LockedClass' object has no attribute '" + attribute + "'")
+            raise AttributeError("'LockedClass' object has no attribute '" + atr + "'")
