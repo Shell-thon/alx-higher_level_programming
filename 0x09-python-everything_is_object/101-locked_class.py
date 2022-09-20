@@ -1,6 +1,12 @@
 #!/usr/bin/python3
+"""
+LockedClass class
+"""
+
 class LockedClass:
-    def __setattr__(self, attr, value):
-        if attr != 'first_name':
-            raise AttributeError("'LockedClass' object has no attribute '{}'".format(attr))
-        self.__dict__.update({attr: value})
+    """ setattr """
+    def __setattr__(self, attribute, value):
+        if attribute == "first_name":
+            self.__dict__[attribute] = value
+        else:
+            raise AttributeError("'LockedClass' object has no attribute '" + attribute + "'")
