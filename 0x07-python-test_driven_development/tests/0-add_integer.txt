@@ -1,49 +1,34 @@
-=====================
-=== 0-add_integer ===
-=====================
+The ``0-add_integer`` module
+======================
 
-imports add_integer function
-----------------------------
-	>>> add_integer = __import__('0-add_integer').add_integer
+Using ``add_integer``
+-------------------
 
-checks with two integer numbers
--------------------------------
-	>>> add_integer(1, 1)
-	2
+Importing the function from the module:
+	>>> add_integer = __import__("0-add_integer").add_integer
 
-checks with one integer number
-------------------------------
-	>>> add_integer(1)
-	99
+Checking for module docstring:
+	 >>> m = __import__("0-add_integer").__doc__
+	 >>> len(m) > 1
+	 True
 
-checks with one negative integer number
----------------------------------------
-	>>> add_integer(-1)
-	97
+Checking for function docstring:
+	 >>> f = __import__("0-add_integer").add_integer.__doc__
+         >>> len(f) > 1
+         True
 
-checks with two negative integer numbers
-----------------------------------------
-	>>> add_integer(-1, -1)
-	-2
+Checking regular addition:
+	 >>> add_integer(2, 3)
+	 5
 
-checks with one string and one integer number
----------------------------------------------
-	>>> add_integer('something', 1)
-	Traceback (most recent call last):
-	TypeError: a must be an integer
+Checking positive with negative:
+	 >>> add_integer(2, -4)
+	 -2
 
-checks with one integer number and one string
----------------------------------------------
-	>>> add_integer(1, 'something')
-	Traceback (most recent call last):
-	TypeError: b must be an integer
+Checking negative with positive:
+	 >>> add_integer(-6, 8)
+	 2
 
-checks with one integer number and one float number
----------------------------------------------------
-	>>> add_integer(1, 1.5)
-	2
-
-checks with float and integer number
-------------------------------------
-	>>> add_integer(1.5, 1)
-	2
+Checking addition over multiple values:
+	 >>> [add_integer(i, i ** 2) for i in range(6)]
+	 [0, 2, 6, 12, 20, 30]
