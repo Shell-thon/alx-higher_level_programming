@@ -6,7 +6,7 @@ importing class:
 
 checking for module docstring:
 	>>> m = __import__('1-my_list').__doc__
-	>>> len(c) > 1
+	>>> len(m) > 1
 	True
 
 checking for class docstring:
