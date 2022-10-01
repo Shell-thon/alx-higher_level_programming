@@ -10,9 +10,9 @@ class TestBase(unittest.TestCase):
     """
     test class for Base class
     """
-    def test_1_id(self):
+    def test_0(self):
         """
-        test 1
+        test 0
         """
         b1 = Base()
         self.assertEqual(b1.id, 1)
