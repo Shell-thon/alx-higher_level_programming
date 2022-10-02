@@ -95,7 +95,11 @@ class Rectangle(Base):
         """
         prints rectangle
         """
+        for y in range(self.__y):
+            print()
         for column in range(self.__height):
+            for x in range(self.__x):
+                print(' ', end='')
             for row in range(self.__width):
                 print("#", end='')
             print()
