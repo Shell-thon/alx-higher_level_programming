@@ -29,7 +29,8 @@ class Rectangle(Base):
         """
         overriden __str__ method
         """
-        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.__x, self.__y, self.__width, self.__height)
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(
+                self.id, self.__x, self.__y, self.__width, self.__height)
 
     @property
     def width(self):
@@ -103,3 +104,18 @@ class Rectangle(Base):
             for row in range(self.__width):
                 print("#", end='')
             print()
+
+    def update(self, *args):
+        """
+        assigns an argument to each attribute
+        """
+        if len(args) > 0:
+            self.id = args[0]
+        if len(args) > 1:
+            self.width = args[1]
+        if len(args) > 2:
+            self.height = args[2]
+        if len(args) > 3:
+            self.x = args[3]
+        if len(args) > 4:
+            self.y = args[4]
