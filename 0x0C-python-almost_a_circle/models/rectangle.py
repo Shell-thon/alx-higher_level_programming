@@ -32,7 +32,7 @@ class Rectangle(Base):
         return "[Rectangle] ({}) {}/{} - {}/{}".format(
                 self.id, self.__x, self.__y, self.__width, self.__height)
 
-    def check(self, name, value, less_eq = True):
+    def check(self, name, value, less_eq=True):
         """
         checks for value and type error
         """
@@ -44,7 +44,6 @@ class Rectangle(Base):
         else:
             if value < 0:
                 raise ValueError("{} must be >= 0".format(name))
-
 
     @property
     def width(self):
