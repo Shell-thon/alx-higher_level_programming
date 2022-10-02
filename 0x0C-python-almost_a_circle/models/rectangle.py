@@ -25,6 +25,12 @@ class Rectangle(Base):
         self.x = x
         self.y = y
 
+    def __str__(self):
+        """
+        overriden __str__ method
+        """
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.__x, self.__y, self.__width, self.__height)
+
     @property
     def width(self):
         """ width getter """
