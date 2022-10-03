@@ -111,12 +111,12 @@ class Rectangle(Base):
         assigns an argument to each attribute
         """
         asa = (self.id, self.width, self.height, self.x, self.y)
-        if args != ():
+        if args:
             self.id, self.width, self.height, self.x, self.y = \
                     args + asa[len(args):len(asa)]
-        else:
-            for (name, value) in kwargs.items():
-                setattr(self, name, value)
+        elif kwargs:
+            for (key, value) in kwargs.items():
+                setattr(self, key, value)
 
     def to_dictionary(self):
         """
