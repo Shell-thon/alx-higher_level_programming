@@ -4,6 +4,7 @@ base module
 """
 import json
 import os
+import csv
 
 
 class Base:
@@ -24,9 +25,9 @@ class Base:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
 
+    @staticmethod
     def to_json_string(list_dictionaries):
-        """
-        to_json_string - returns the JSON string representation of list_dictionaries.
+        """returns the JSON string representation of list_dictionaries.
         Args:
             list_dictionaries: is a list of dictionaries
         """
@@ -34,3 +35,17 @@ class Base:
             return "[]"
         else:
             return json.dumps(list_dictionaries)
+
+    @classmethod
+    def save_to_file(cls, list_objs):
+        """writes the JSON string representation of list_objs to a file.
+        Args:
+            cls:
+            list_objs: is a list of instances who inherits of Base
+        """
+        if list_objs is None or list_objs == []:
+            lst = "[]"
+        else:
+            lst = cls.to_json_string([o.to_dictionary() for o in list_objs])
+        with open(cls.__name__ + ".json", 'w') as f:
+            f.write(lst)
