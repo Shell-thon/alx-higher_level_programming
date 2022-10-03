@@ -5,6 +5,7 @@ base module
 import json
 import os
 import csv
+import turtle
 
 
 class Base:
@@ -40,15 +41,17 @@ class Base:
     def save_to_file(cls, list_objs):
         """writes the JSON string representation of list_objs to a file.
         Args:
-            cls:
             list_objs: is a list of instances who inherits of Base
         """
+        filename = cls.__name__ + ".json"
         if list_objs is None or list_objs == []:
             lst = "[]"
         else:
             lst = cls.to_json_string([o.to_dictionary() for o in list_objs])
-        with open(cls.__name__ + ".json", 'w') as f:
+        with open(filename, 'w') as f:
             f.write(lst)
+
+        return lst
 
     @staticmethod
     def from_json_string(json_string):
@@ -57,7 +60,7 @@ class Base:
             json_string: is a string representing a list of dictionaries
         """
         if json_string is None or json_string == []:
-            return []
+            return "[]"
         else:
             return json.loads(json_string)
 
@@ -79,16 +82,17 @@ class Base:
     def load_from_file(cls):
         """returns a list of instances."""
         filename = cls.__name__ + ".json"
-        lst = []
-        if os.path.exists(filename):
+        if not os.path.exists(filename):
+            return "[]"
+        else:
+            lst = []
             with open(filename, 'r') as f:
                 s = f.read()
                 list_dicts = cls.from_json_string(s)
                 for d in list_dicts:
                     lst.append(cls.create(**d))
+            return lst
 
-        return lst
-        
     @classmethod
     def save_to_file_csv(cls, list_objs):
         """Serializes list_objs in CSV format
@@ -139,3 +143,29 @@ class Base:
                                 setattr(i, fields[j], int(e))
                         lst.append(i)
         return lst
+
+    @classmethod
+    def draw(cls, list_rectangles, list_squares):
+        """opens a window and draws all the Rectangles and Squares.
+        Args:
+            list_rectangles:
+            list_squares:
+        """
+        window = turtle.Screen()
+        pen = turtle.Pen()
+        figures = list_rectangles + list_squares
+
+        for fig in figures:
+            pen.up()
+            pen.goto(fig.x, fig.y)
+            pen.down()
+            pen.forward(fig.width)
+            pen.right(90)
+            pen.forward(fig.height)
+            pen.right(90)
+            pen.forward(fig.width)
+            pen.right(90)
+            pen.forward(fig.height)
+            pen.right(90)
+
+        window.exitonclick()

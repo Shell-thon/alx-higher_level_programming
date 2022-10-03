@@ -30,20 +30,20 @@ class Rectangle(Base):
         overriden __str__ method
         """
         return "[Rectangle] ({}) {}/{} - {}/{}".format(
-                self.id, self.__x, self.__y, self.__width, self.__height)
+                self.id, self.x, self.y, self.width, self.height)
 
-    def check(self, name, value, less_eq=True):
+    def check(self, key, value, less_eq=True):
         """
         checks for value and type error
         """
         if not isinstance(value, int):
-            raise TypeError("{} must be an integer".format(name))
+            raise TypeError("{} must be an integer".format(key))
         if less_eq:
             if value <= 0:
-                raise ValueError("{} must be > 0".format(name))
+                raise ValueError("{} must be > 0".format(key))
         else:
             if value < 0:
-                raise ValueError("{} must be >= 0".format(name))
+                raise ValueError("{} must be >= 0".format(key))
 
     @property
     def width(self):
@@ -97,12 +97,12 @@ class Rectangle(Base):
         """
         prints rectangle
         """
-        for y in range(self.__y):
+        for y in range(self.y):
             print()
-        for column in range(self.__height):
-            for x in range(self.__x):
+        for column in range(self.height):
+            for x in range(self.x):
                 print(' ', end='')
-            for row in range(self.__width):
+            for row in range(self.width):
                 print("#", end='')
             print()
 
@@ -110,10 +110,10 @@ class Rectangle(Base):
         """
         assigns an argument to each attribute
         """
-        asa = (self.id, self.width, self.height, self.x, self.y)
+        lst = (self.id, self.width, self.height, self.x, self.y)
         if args:
             self.id, self.width, self.height, self.x, self.y = \
-                    args + asa[len(args):len(asa)]
+                    args + lst[len(args):len(lst)]
         elif kwargs:
             for (key, value) in kwargs.items():
                 setattr(self, key, value)
@@ -122,4 +122,5 @@ class Rectangle(Base):
         """
         returns the dictionary representation of a Rectangle.
         """
-        return {'x': self.x, 'y': self.y, 'id': self.y, 'height': self.height, 'width': self.width}
+        return {'x': self.x, 'y': self.y, 'id': self.id,
+                'height': self.height, 'width': self.width}
