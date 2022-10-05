@@ -4,7 +4,7 @@
 
 **Read or watch**:
 
-- [More Control Flow Tools](https://docs.python.org/3/tutorial/controlflow.html) (Read until “4.6. Defining Functions” included)
+- [More Control Flow Tools](https://docs.python.org/3/tutorial/controlflow.html) (_Read until “4.6. Defining Functions” included_)
 - [IndentationError](https://www.youtube.com/watch?v=1QXOd2ZQs-Q)
 - [How To Use String Formatters in Python 3](https://www.digitalocean.com/community/tutorials/how-to-use-string-formatters-in-python-3)
 - [Learn to Program](https://www.youtube.com/playlist?list=PLGLfVvz_LVvTn3cK5e6LjhgGiSeVlIRwt)
@@ -62,6 +62,10 @@
 - Don’t forget to push your header file
 - All your header files should be include guarded
 
+## More Info
+
+_Note_: you do not need to understand lists yet.
+
 ### Quiz questions
 
 #### Question #0
@@ -72,12 +76,10 @@ What do these lines print?
         print("Holberton")
     else:
         print("School")
-    
 
-- [X] Holberton
-    
+- [ ] Holberton
+
 - [ ] School
-    
 
 #### Question #1
 
@@ -87,12 +89,10 @@ What do these lines print?
         print("Holberton")
     else:
         print("School")
-    
 
-- [X] Holberton
-    
+- [ ] Holberton
+
 - [ ] School
-    
 
 #### Question #2
 
@@ -102,12 +102,10 @@ What do these lines print?
         print("Holberton")
     else:
         print("School")
-    
 
 - [ ] Holberton
-    
-- [X] School
-    
+
+- [ ] School
 
 #### Question #3
 
@@ -117,12 +115,10 @@ What do these lines print?
         print("Holberton")
     else:
         print("School")
-    
 
-- [X] Holberton
-    
+- [ ] Holberton
+
 - [ ] School
-    
 
 #### Question #4
 
@@ -136,14 +132,12 @@ What do these lines print?
             print("C is fun")
     else:
         print("School")
-    
 
-- [X] Holberton
-    
+- [ ] Holberton
+
 - [ ] C is fun
-    
+
 - [ ] School
-    
 
 #### Question #5
 
@@ -156,14 +150,12 @@ What do these lines print?
         print("C is fun")
     else:
         print("School")
-    
 
 - [ ] Holberton
-    
-- [X] C is fun
-    
+
+- [ ] C is fun
+
 - [ ] School
-    
 
 #### Question #6
 
@@ -171,16 +163,14 @@ What do these lines print?
 
     for i in range(4):
         print(i, end=" ")
-    
 
 - [ ] 1 2 3 4
-    
+
 - [ ] 1 2 3
-    
-- [X] 0 1 2 3
-    
+
+- [ ] 0 1 2 3
+
 - [ ] 0 1 2 3 4
-    
 
 #### Question #7
 
@@ -188,16 +178,14 @@ What do these lines print?
 
     for i in range(2, 4):
         print(i, end=" ")
-    
 
 - [ ] 2 4
-    
-- [X] 2 3
-    
+
+- [ ] 2 3
+
 - [ ] 2 3 4
-    
+
 - [ ] 3 4
-    
 
 #### Question #8
 
@@ -205,16 +193,14 @@ What do these lines print?
 
     for i in range(2, 10, 2):
         print(i, end=" ")
-    
 
 - [ ] 2 3 4 5 6 7 8 9 10
-    
+
 - [ ] 2 3 4 5 6 7 8 9
-    
+
 - [ ] 4 6 8 10 12 14 16 18
-    
-- [X] 2 4 6 8
-    
+
+- [ ] 2 4 6 8
 
 ## Tasks
 
@@ -226,11 +212,11 @@ This program will assign a random signed number to the variable `number` each ti
 - The variable `number` will store a different value every time you will run this program
 - You don’t have to understand what `import`, `random. randint` do. Please do not touch this code
 - The output of the program should be:
-    - The number, followed by
-        - if the number is greater than 0: `is positive`
-        - if the number is 0: `is zero`
-        - if the number is less than 0: `is negative`
-    - followed by a new line
+  - The number, followed by
+    - if the number is greater than 0: `is positive`
+    - if the number is 0: `is zero`
+    - if the number is less than 0: `is negative`
+  - followed by a new line
 
 Example:
 
@@ -253,7 +239,6 @@ Example:
     guillaume@ubuntu:~/0x01$ ./0-positive_or_negative.py 
     5 is positive
     guillaume@ubuntu:~/0x01$ 
-    
 
 **Repo:**
 
@@ -269,13 +254,13 @@ This program will assign a random signed number to the variable `number` each ti
 - The variable `number` will store a different value every time you will run this program
 - You don’t have to understand what `import`, `random.randint` do. **Please do not touch this code**. This line should not change: `number = random.randint(-10000, 10000)`
 - The output of the program should be:
-    - The string `Last digit of`, followed by
-    - the number, followed by
-    - the string `is`, followed by the last digit of `number`, followed by
-        - if the last digit is greater than 5: the string `and is greater than 5`
-        - if the last digit is 0: the string `and is 0`
-        - if the last digit is less than 6 and not 0: the string `and is less than 6 and not 0`
-    - followed by a new line
+  - The string `Last digit of`, followed by
+  - the number, followed by
+  - the string `is`, followed by the last digit of `number`, followed by
+    - if the last digit is greater than 5: the string `and is greater than 5`
+    - if the last digit is 0: the string `and is 0`
+    - if the last digit is less than 6 and not 0: the string `and is less than 6 and not 0`
+  - followed by a new line
 
 Example:
 
@@ -302,7 +287,6 @@ Example:
     guillaume@ubuntu:~/0x01$ ./1-last_digit.py
     Last digit of 5169 is 9 and is greater than 5
     guillaume@ubuntu:~/0x01$ 
-    
 
 **Repo:**
 
@@ -323,7 +307,6 @@ Example:
 
     guillaume@ubuntu:~/0x01$ ./2-print_alphabet.py
     abcdefghijklmnopqrstuvwxyzguillaume@ubuntu:~/0x01$
-    
 
 **Repo:**
 
@@ -345,7 +328,6 @@ Example:
 
     guillaume@ubuntu:~/0x01$ ./3-print_alphabt.py
     abcdfghijklmnoprstuvwxyzguillaume@ubuntu:~/0x01$
-    
 
 **Repo:**
 
@@ -389,7 +371,6 @@ Example:
     97 = 0x61
     98 = 0x62
     guillaume@ubuntu:~/0x01$
-    
 
 **Repo:**
 
@@ -414,7 +395,6 @@ Example:
     guillaume@ubuntu:~/0x01$ ./5-print_comb2.py
     00, 01, 02, 03, 04, 05, 06, 07, 08, 09, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99
     guillaume@ubuntu:~/0x01$ 
-    
 
 **Repo:**
 
@@ -442,7 +422,6 @@ Example:
     guillaume@ubuntu:~/0x01$ ./6-print_comb3.py
     01, 02, 03, 04, 05, 06, 07, 08, 09, 12, 13, 14, 15, 16, 17, 18, 19, 23, 24, 25, 26, 27, 28, 29, 34, 35, 36, 37, 38, 39, 45, 46, 47, 48, 49, 56, 57, 58, 59, 67, 68, 69, 78, 79, 89
     guillaume@ubuntu:~/0x01$ 
-    
 
 **Repo:**
 
@@ -482,7 +461,6 @@ Example:
     3 is upper
     g is lower
     guillaume@ubuntu:~/0x01$ 
-    
 
 **Repo:**
 
@@ -516,7 +494,6 @@ Example:
     BEST
     BEST SCHOOL 98 BATTERY STREET
     guillaume@ubuntu:~/0x01$ 
-    
 
 **Repo:**
 
@@ -548,14 +525,12 @@ Example:
     guillaume@ubuntu:~/0x01$ ./9-main.py
     8044
     guillaume@ubuntu:~/0x01$ 
-    
 
 **Repo:**
 
 - GitHub repository: [alx-higher_level_programming](../)
 - Directory: [0x01-python-if_else_loops_functions](./)
 - File: [9-print_last_digit.py](./9-print_last_digit.py)
-
 
 ### 10\. a + b
 
@@ -582,14 +557,12 @@ Example:
     98
     98
     guillaume@ubuntu:~/0x01$ 
-    
 
 **Repo:**
 
 - GitHub repository: [alx-higher_level_programming](../)
 - Directory: [0x01-python-if_else_loops_functions](./)
 - File: [10-add.py](./10-add.py)
-
 
 ### 11\. a ^ b
 
@@ -620,14 +593,12 @@ Example:
     0.0001
     -1024
     guillaume@ubuntu:~/0x01$ 
-    
 
 **Repo:**
 
 - GitHub repository: [alx-higher_level_programming](../)
 - Directory: [0x01-python-if_else_loops_functions](./)
 - File: [11-pow.py](./11-pow.py)
-
 
 ### 12\. Fizz Buzz
 
@@ -653,14 +624,12 @@ Example:
     guillaume@ubuntu:~/0x01$ ./12-main.py | cat -e
     1 2 Fizz 4 Buzz Fizz 7 8 Fizz Buzz 11 Fizz 13 14 FizzBuzz 16 17 Fizz 19 Buzz Fizz 22 23 Fizz Buzz 26 Fizz 28 29 FizzBuzz 31 32 Fizz 34 Buzz Fizz 37 38 Fizz Buzz 41 Fizz 43 44 FizzBuzz 46 47 Fizz 49 Buzz Fizz 52 53 Fizz Buzz 56 Fizz 58 59 FizzBuzz 61 62 Fizz 64 Buzz Fizz 67 68 Fizz Buzz 71 Fizz 73 74 FizzBuzz 76 77 Fizz 79 Buzz Fizz 82 83 Fizz Buzz 86 Fizz 88 89 FizzBuzz 91 92 Fizz 94 Buzz Fizz 97 98 Fizz Buzz $
     guillaume@ubuntu:~/0x01$ 
-    
 
 **Repo:**
 
 - GitHub repository: [alx-higher_level_programming](../)
 - Directory: [0x01-python-if_else_loops_functions](./)
 - File: [12-fizzbuzz.py](./12-fizzbuzz.py)
-
 
 ### 13\. Insert in sorted linked list
 
@@ -675,8 +644,6 @@ Write a function in C that inserts a number into a sorted singly linked list.
 - Return: the address of the new node, or `NULL` if it failed
 
 Example:
-
-lists.h
 
     carrie@ubuntu:0x01$ cat lists.h 
     #ifndef LISTS_H
@@ -704,8 +671,6 @@ lists.h
     
     #endif /* LISTS_H */
     
-
-linked_lists.c
 
     carrie@ubuntu:0x01$ cat linked_lists.c 
     #include <stdio.h>
@@ -784,8 +749,6 @@ linked_lists.c
     }
     
 
-13-main.c
-
     carrie@ubuntu:0x01$ cat 13-main.c 
     #include <stdlib.h>
     #include <string.h>
@@ -824,8 +787,6 @@ linked_lists.c
     }
     
 
-command:
-
     carrie@ubuntu:0x01$ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 13-main.c linked_lists.c 13-insert_number.c -o insert
     carrie@ubuntu:0x01$ ./insert
     0
@@ -847,14 +808,12 @@ command:
     402
     1024
     carrie@ubuntu:0x01$  
-    
 
 **Repo:**
 
 - GitHub repository: [alx-higher_level_programming](../)
 - Directory: [0x01-python-if_else_loops_functions](./)
 - File: [13-insert_number.c](./13-insert_number.c), [lists.h](./lists.h)
-
 
 ### 14\. Smile in the mirror
 
@@ -869,14 +828,12 @@ Example:
 
     guillaume@ubuntu:~/0x01$ ./100-print_tebahpla.py
     zYxWvUtSrQpOnMlKjIhGfEdCbAguillaume@ubuntu:~/0x01$
-    
 
 **Repo:**
 
 - GitHub repository: [alx-higher_level_programming](../)
 - Directory: [0x01-python-if_else_loops_functions](./)
 - File: [100-print_tebahpla.py](./100-print_tebahpla.py)
-
 
 ### 15\. Remove at position
 
@@ -906,14 +863,12 @@ Example:
     School
     Python
     guillaume@ubuntu:~/0x01$ 
-    
 
 **Repo:**
 
 - GitHub repository: [alx-higher_level_programming](../)
 - Directory: [0x01-python-if_else_loops_functions](./)
 - File: [101-remove_char_at.py](./101-remove_char_at.py)
-
 
 ### 16\. ByteCode -> Python #2
 
@@ -945,7 +900,6 @@ Example:
                  43 LOAD_FAST                2 (c)
                  46 BINARY_SUBTRACT
                  47 RETURN_VALUE
-    
 
 [tips - ByteCode](https://docs.python.org/3.4/library/dis.html)
 
