@@ -39,8 +39,9 @@ class Square(Rectangle):
         Args:
             size: size of the square
         """
-        self.width = size
-        self.height = size
+        self.__size = size
+        self.width = self.__size
+        self.height = self.__size
 
     def update(self, *args, **kwargs):
         """
