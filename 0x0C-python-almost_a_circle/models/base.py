@@ -89,7 +89,7 @@ class Base:
                 list_dicts = cls.from_json_string(s)
                 for d in list_dicts:
                     lst.append(cls.create(**d))
-            return lst
+        return lst
 
     @classmethod
     def save_to_file_csv(cls, list_objs):
