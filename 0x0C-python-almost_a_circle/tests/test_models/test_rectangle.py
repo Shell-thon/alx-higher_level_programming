@@ -15,33 +15,22 @@ class TestRectangle(unittest.TestCase):
         Base._Base__nb_objects = 0
 
     def test_1(self):
-        """
-        test 1
-        """
+        """test 1"""
         r0 = Rectangle(1, 2)
         self.assertEqual(r0.id, 1)
+        self.assertEqual(r0.width, 1)
+        self.assertEqual(r0.height, 2)
+        self.assertEqual(r0.x, 0)
+        self.assertEqual(r0.y, 0)
 
-        r1 = Rectangle(10, 2)
-        self.assertEqual(r1.id, 2)
-
-        r2 = Rectangle(2, 10)
-        self.assertEqual(r2.id, 3)
-
-        r3 = Rectangle(10, 2, 0, 0, 12)
-        self.assertEqual(r3.id, 12)
-
-    def test_3(self):
-        """
-        test 3
-        """
-        r1 = Rectangle(3, 2)
-        self.assertEqual(r1.area(), 6)
-
-        r2 = Rectangle(2, 10)
-        self.assertEqual(r2.area(), 20)
-
-        r3 = Rectangle(8, 7, 0, 0, 12)
-        self.assertEqual(r3.area(), 56)
+    def test_2(self):
+        """test 2"""
+        r0 = Rectangle(1, 2, 3)
+        self.assertEqual(r0.id, 1)
+        self.assertEqual(r0.width, 1)
+        self.assertEqual(r0.height, 2)
+        self.assertEqual(r0.x, 3)
+        self.assertEqual(r0.y, 0)
 
 if __name__ == '__main__':
     unittest.main()
