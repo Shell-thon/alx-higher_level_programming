@@ -22,6 +22,7 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(r0.height, 2)
         self.assertEqual(r0.x, 0)
         self.assertEqual(r0.y, 0)
+        self.assertEqual(r0.__str__(), "[Rectangle] (1) 0/0 - 1/2")
 
     def test_2(self):
         """test 2"""
@@ -31,6 +32,7 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(r0.height, 2)
         self.assertEqual(r0.x, 3)
         self.assertEqual(r0.y, 0)
+        self.assertEqual(r0.__str__(), "[Rectangle] (1) 3/0 - 1/2")
 
 if __name__ == '__main__':
     unittest.main()
