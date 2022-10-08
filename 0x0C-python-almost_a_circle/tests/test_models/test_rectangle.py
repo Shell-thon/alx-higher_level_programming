@@ -68,6 +68,8 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(r0.y, 0)
         self.assertEqual(r0.__str__(), "[Rectangle] (1) 3/0 - 1/2")
         self.assertEqual(r0.area(), 2)
+        output = {'x': 3, 'y': 0, 'id': 1, 'height': 2, 'width': 1}
+        self.assertEqual(r0.to_dictionary(), output)
 
     def test_3(self):
         """test 3"""
@@ -79,6 +81,8 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(r0.y, 4)
         self.assertEqual(r0.__str__(), "[Rectangle] (1) 3/4 - 1/2")
         self.assertEqual(r0.area(), 2)
+        output = {'x': 3, 'y': 4, 'id': 1, 'height': 2, 'width': 1}
+        self.assertEqual(r0.to_dictionary(), output)
 
     def test_4(self):
         """test 4"""
@@ -110,6 +114,8 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(r0.y, 4)
         self.assertEqual(r0.__str__(), "[Rectangle] (5) 3/4 - 1/2")
         self.assertEqual(r0.area(), 2)
+        output = {'x': 3, 'y': 4, 'id': 5, 'height': 2, 'width': 1}
+        self.assertEqual(r0.to_dictionary(), output)
 
     def test_9(self):
         """test 9"""
