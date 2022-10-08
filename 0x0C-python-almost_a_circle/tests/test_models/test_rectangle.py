@@ -25,22 +25,20 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(r0.x, 0)
         self.assertEqual(r0.y, 0)
         self.assertEqual(r0.__str__(), "[Rectangle] (1) 0/0 - 1/2")
-        r0.width = 2
-        self.assertEqual(r0.width, 2)
-        self.assertEqual(r0.area(), 4)
+        self.assertEqual(r0.area(), 2)
         capturedOutput = StringIO()
         sys.stdout = capturedOutput
         r0.display()
         sys.stdout = sys.__stdout__
 
-        output = '##\n##\n'
+        output = '#\n#\n'
         self.assertEqual(capturedOutput.getvalue(), output)
-        output = {'x': 0, 'y': 0, 'id': 1, 'height': 2, 'width': 2}
+        output = {'x': 0, 'y': 0, 'id': 1, 'height': 2, 'width': 1}
         self.assertEqual(r0.to_dictionary(), output)
         r0.update()
-        self.assertEqual(r0.__str__(), "[Rectangle] (1) 0/0 - 2/2")
+        self.assertEqual(r0.__str__(), "[Rectangle] (1) 0/0 - 1/2")
         r0.update(89)
-        self.assertEqual(r0.__str__(), "[Rectangle] (89) 0/0 - 2/2")
+        self.assertEqual(r0.__str__(), "[Rectangle] (89) 0/0 - 1/2")
         r0.update(89, 1)
         self.assertEqual(r0.__str__(), "[Rectangle] (89) 0/0 - 1/2")
         r0.update(89, 1, 2)
@@ -69,8 +67,7 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(r0.x, 3)
         self.assertEqual(r0.y, 0)
         self.assertEqual(r0.__str__(), "[Rectangle] (1) 3/0 - 1/2")
-        r0.width = 3
-        self.assertEqual(r0.width, 3)
+        self.assertEqual(r0.area(), 2)
 
     def test_3(self):
         """test 3"""
@@ -81,6 +78,7 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(r0.x, 3)
         self.assertEqual(r0.y, 4)
         self.assertEqual(r0.__str__(), "[Rectangle] (1) 3/4 - 1/2")
+        self.assertEqual(r0.area(), 2)
 
     def test_4(self):
         """test 4"""
@@ -111,6 +109,7 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(r0.x, 3)
         self.assertEqual(r0.y, 4)
         self.assertEqual(r0.__str__(), "[Rectangle] (5) 3/4 - 1/2")
+        self.assertEqual(r0.area(), 2)
 
     def test_9(self):
         """test 9"""
