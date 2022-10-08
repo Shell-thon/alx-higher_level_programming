@@ -88,5 +88,20 @@ class TestRectangle(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "height must be > 0"):
             Rectangle(1, -2)
 
+    def test_11(self):
+        """test 11"""
+        with self.assertRaisesRegex(ValueError, "width must be > 0"):
+            Rectangle(0, 2)
+
+    def test_12(self):
+        """test 12"""
+        with self.assertRaisesRegex(ValueError, "height must be > 0"):
+            Rectangle(1, 0)
+
+    def test_13(self):
+        """test 13"""
+        r0 = Rectangle(2,3)
+        self.assertEqual(r0.area(), 6)
+
 if __name__ == '__main__':
     unittest.main()
