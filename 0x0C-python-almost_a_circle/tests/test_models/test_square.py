@@ -45,6 +45,9 @@ class TestSquare(unittest.TestCase):
         self.assertEqual(s0.__str__(), "[Square] (89) 2/3 - 1")
         s0.update(**{'id': 89, 'size': 1, 'x': 2, 'y': 3})
         self.assertEqual(s0.__str__(), "[Square] (89) 2/3 - 1")
+        s0_dictionary = s0.to_dictionary()
+        s1 = Rectangle.create(**s0_dictionary)
+        self.assertIsNot(s0, s1)
 
     def test_2(self):
         """test 2"""
