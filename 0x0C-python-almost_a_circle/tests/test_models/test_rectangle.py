@@ -67,7 +67,7 @@ class TestRectangle(unittest.TestCase):
         """test 7"""
         with self.assertRaisesRegex(TypeError, "y must be an integer"):
             Rectangle(1, 2, 3, "4")
-    
+
     def test_8(self):
         """test 8"""
         r0 = Rectangle(1, 2, 3, 4, 5)
@@ -100,8 +100,9 @@ class TestRectangle(unittest.TestCase):
 
     def test_13(self):
         """test 13"""
-        r0 = Rectangle(2,3)
+        r0 = Rectangle(2, 3)
         self.assertEqual(r0.area(), 6)
+
 
 if __name__ == '__main__':
     unittest.main()
