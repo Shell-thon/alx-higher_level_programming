@@ -49,17 +49,16 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(r0.__str__(), "[Rectangle] (89) 3/0 - 1/2")
         r0.update(89, 1, 2, 3, 4)
         self.assertEqual(r0.__str__(), "[Rectangle] (89) 3/4 - 1/2")
-        r0.update(**{ 'id': 89 })
+        r0.update(**{'id': 89})
         self.assertEqual(r0.__str__(), "[Rectangle] (89) 3/4 - 1/2")
-        r0.update(**{ 'id': 89, 'width': 1 })
+        r0.update(**{'id': 89, 'width': 1})
         self.assertEqual(r0.__str__(), "[Rectangle] (89) 3/4 - 1/2")
-        r0.update(**{ 'id': 89, 'width': 1, 'height': 2 })
+        r0.update(**{'id': 89, 'width': 1, 'height': 2})
         self.assertEqual(r0.__str__(), "[Rectangle] (89) 3/4 - 1/2")
-        r0.update(**{ 'id': 89, 'width': 1, 'height': 2, 'x': 3 })
+        r0.update(**{'id': 89, 'width': 1, 'height': 2, 'x': 3})
         self.assertEqual(r0.__str__(), "[Rectangle] (89) 3/4 - 1/2")
-        r0.update(**{ 'id': 89, 'width': 1, 'height': 2, 'x': 3, 'y': 4 })
+        r0.update(**{'id': 89, 'width': 1, 'height': 2, 'x': 3, 'y': 4})
         self.assertEqual(r0.__str__(), "[Rectangle] (89) 3/4 - 1/2")
-
 
     def test_2(self):
         """test 2"""
