@@ -27,6 +27,24 @@ class TestSquare(unittest.TestCase):
         self.assertEqual(s0.area(), 1)
         output = {'id': 1, 'x': 0, 'size': 1, 'y': 0}
         self.assertEqual(s0.to_dictionary(), output)
+        s0.update()
+        self.assertEqual(s0.__str__(), "[Square] (1) 0/0 - 1")
+        s0.update(89)
+        self.assertEqual(s0.__str__(), "[Square] (89) 0/0 - 1")
+        s0.update(89, 1)
+        self.assertEqual(s0.__str__(), "[Square] (89) 0/0 - 1")
+        s0.update(89, 1, 2)
+        self.assertEqual(s0.__str__(), "[Square] (89) 2/0 - 1")
+        s0.update(89, 1, 2, 3)
+        self.assertEqual(s0.__str__(), "[Square] (89) 2/3 - 1")
+        s0.update(**{'id': 89})
+        self.assertEqual(s0.__str__(), "[Square] (89) 2/3 - 1")
+        s0.update(**{'id': 89, 'size': 1})
+        self.assertEqual(s0.__str__(), "[Square] (89) 2/3 - 1")
+        s0.update(**{'id': 89, 'size': 1, 'x': 2})
+        self.assertEqual(s0.__str__(), "[Square] (89) 2/3 - 1")
+        s0.update(**{'id': 89, 'size': 1, 'x': 2, 'y': 3})
+        self.assertEqual(s0.__str__(), "[Square] (89) 2/3 - 1")
 
     def test_2(self):
         """test 2"""
@@ -40,6 +58,24 @@ class TestSquare(unittest.TestCase):
         self.assertEqual(s0.area(), 1)
         output = {'id': 1, 'x': 2, 'size': 1, 'y': 0}
         self.assertEqual(s0.to_dictionary(), output)
+        s0.update()
+        self.assertEqual(s0.__str__(), "[Square] (1) 2/0 - 1")
+        s0.update(89)
+        self.assertEqual(s0.__str__(), "[Square] (89) 2/0 - 1")
+        s0.update(89, 1)
+        self.assertEqual(s0.__str__(), "[Square] (89) 2/0 - 1")
+        s0.update(89, 1, 2)
+        self.assertEqual(s0.__str__(), "[Square] (89) 2/0 - 1")
+        s0.update(89, 1, 2, 3)
+        self.assertEqual(s0.__str__(), "[Square] (89) 2/3 - 1")
+        s0.update(**{'id': 89})
+        self.assertEqual(s0.__str__(), "[Square] (89) 2/3 - 1")
+        s0.update(**{'id': 89, 'size': 1})
+        self.assertEqual(s0.__str__(), "[Square] (89) 2/3 - 1")
+        s0.update(**{'id': 89, 'size': 1, 'x': 2})
+        self.assertEqual(s0.__str__(), "[Square] (89) 2/3 - 1")
+        s0.update(**{'id': 89, 'size': 1, 'x': 2, 'y': 3})
+        self.assertEqual(s0.__str__(), "[Square] (89) 2/3 - 1")
 
     def test_3(self):
         """test 3"""
@@ -53,6 +89,24 @@ class TestSquare(unittest.TestCase):
         self.assertEqual(s0.area(), 1)
         output = {'id': 1, 'x': 2, 'size': 1, 'y': 3}
         self.assertEqual(s0.to_dictionary(), output)
+        s0.update()
+        self.assertEqual(s0.__str__(), "[Square] (1) 2/3 - 1")
+        s0.update(89)
+        self.assertEqual(s0.__str__(), "[Square] (89) 2/3 - 1")
+        s0.update(89, 1)
+        self.assertEqual(s0.__str__(), "[Square] (89) 2/3 - 1")
+        s0.update(89, 1, 2)
+        self.assertEqual(s0.__str__(), "[Square] (89) 2/3 - 1")
+        s0.update(89, 1, 2, 3)
+        self.assertEqual(s0.__str__(), "[Square] (89) 2/3 - 1")
+        s0.update(**{'id': 89})
+        self.assertEqual(s0.__str__(), "[Square] (89) 2/3 - 1")
+        s0.update(**{'id': 89, 'size': 1})
+        self.assertEqual(s0.__str__(), "[Square] (89) 2/3 - 1")
+        s0.update(**{'id': 89, 'size': 1, 'x': 2})
+        self.assertEqual(s0.__str__(), "[Square] (89) 2/3 - 1")
+        s0.update(**{'id': 89, 'size': 1, 'x': 2, 'y': 3})
+        self.assertEqual(s0.__str__(), "[Square] (89) 2/3 - 1")
 
     def test_4(self):
         """test 4"""
@@ -81,6 +135,24 @@ class TestSquare(unittest.TestCase):
         self.assertEqual(s0.area(), 1)
         output = {'id': 4, 'x': 2, 'size': 1, 'y': 3}
         self.assertEqual(s0.to_dictionary(), output)
+        s0.update()
+        self.assertEqual(s0.__str__(), "[Square] (4) 2/3 - 1")
+        s0.update(89)
+        self.assertEqual(s0.__str__(), "[Square] (89) 2/3 - 1")
+        s0.update(89, 1)
+        self.assertEqual(s0.__str__(), "[Square] (89) 2/3 - 1")
+        s0.update(89, 1, 2)
+        self.assertEqual(s0.__str__(), "[Square] (89) 2/3 - 1")
+        s0.update(89, 1, 2, 3)
+        self.assertEqual(s0.__str__(), "[Square] (89) 2/3 - 1")
+        s0.update(**{'id': 89})
+        self.assertEqual(s0.__str__(), "[Square] (89) 2/3 - 1")
+        s0.update(**{'id': 89, 'size': 1})
+        self.assertEqual(s0.__str__(), "[Square] (89) 2/3 - 1")
+        s0.update(**{'id': 89, 'size': 1, 'x': 2})
+        self.assertEqual(s0.__str__(), "[Square] (89) 2/3 - 1")
+        s0.update(**{'id': 89, 'size': 1, 'x': 2, 'y': 3})
+        self.assertEqual(s0.__str__(), "[Square] (89) 2/3 - 1")
 
     def test_8(self):
         """test 8"""
