@@ -5,8 +5,8 @@ test_rectangle module
 import unittest
 from models.base import Base
 from models.rectangle import Rectangle
-from io import StringIO
-import sys
+import io
+import contextlib
 
 
 class TestRectangle(unittest.TestCase):
@@ -18,6 +18,7 @@ class TestRectangle(unittest.TestCase):
 
     def test_1(self):
         """test 1"""
+        f = io.StringIO()
         r0 = Rectangle(1, 2)
         self.assertEqual(r0.id, 1)
         self.assertEqual(r0.width, 1)
@@ -26,13 +27,12 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(r0.y, 0)
         self.assertEqual(r0.__str__(), "[Rectangle] (1) 0/0 - 1/2")
         self.assertEqual(r0.area(), 2)
-        capturedOutput = StringIO()
-        sys.stdout = capturedOutput
-        r0.display()
-        sys.stdout = sys.__stdout__
+        with contextlib.redirect_stdout(f):
+        	r0.display()
+        s = f.getvalue()
 
         output = '#\n#\n'
-        self.assertEqual(capturedOutput.getvalue(), output)
+        self.assertEqual(s, output)
         output = {'x': 0, 'y': 0, 'id': 1, 'height': 2, 'width': 1}
         self.assertEqual(r0.to_dictionary(), output)
         r0.update()
@@ -57,6 +57,9 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(r0.__str__(), "[Rectangle] (89) 3/4 - 1/2")
         r0.update(**{'id': 89, 'width': 1, 'height': 2, 'x': 3, 'y': 4})
         self.assertEqual(r0.__str__(), "[Rectangle] (89) 3/4 - 1/2")
+        r0_dictionary = r0.to_dictionary()
+        r1 = Rectangle.create(**r0_dictionary)
+        self.assertIsNot(r0, r1)
 
     def test_2(self):
         """test 2"""
