@@ -67,14 +67,24 @@ class TestRectangle(unittest.TestCase):
         """test 7"""
         with self.assertRaisesRegex(TypeError, "y must be an integer"):
             Rectangle(1, 2, 3, "4")
-
+    
     def test_8(self):
         """test 8"""
-        with self.assertRaisesRegex(ValueError, "width must be > 0"):
-            Rectangle(-1, 2)
+        r0 = Rectangle(1, 2, 3, 4, 5)
+        self.assertEqual(r0.id, 5)
+        self.assertEqual(r0.width, 1)
+        self.assertEqual(r0.height, 2)
+        self.assertEqual(r0.x, 3)
+        self.assertEqual(r0.y, 4)
+        self.assertEqual(r0.__str__(), "[Rectangle] (5) 3/4 - 1/2")
 
     def test_9(self):
         """test 9"""
+        with self.assertRaisesRegex(ValueError, "width must be > 0"):
+            Rectangle(-1, 2)
+
+    def test_10(self):
+        """test 10"""
         with self.assertRaisesRegex(ValueError, "height must be > 0"):
             Rectangle(1, -2)
 
