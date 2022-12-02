@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
- 7-model_state_fetch_all module
+8-model_state_fetch_first module
 """
 import sys
 from model_state import Base, State
