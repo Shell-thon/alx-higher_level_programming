@@ -1,5 +1,7 @@
 #!/usr/bin/python
-
+"""
+0-select_states module
+"""
 import MySQLdb
 import sys
 
