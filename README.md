@@ -1,5 +1,7 @@
 # ALX Higher Level Programming
 
+## Projects
+
 - [0x00. Python - Hello, World](./0x00-python-hello_world/)
 - [0x01. Python - if/else, loops, functions](./0x01-python-if_else_loops_functions/)
 - [0x02. Python - import & modules](./0x02-python-import_modules/)
@@ -22,6 +24,10 @@
 - [0x13. JavaScript - Objects, Scopes and Closures](./0x13-javascript_objects_scopes_closures/)
 - [0x14. JavaScript - Web scraping](./0x14-javascript-web_scraping/)
 - [0x15. JavaScript - Web jQuery](./0x15-javascript-web_jquery/)
+
+## Author
+
+- Mubarek Seid
 
 ## License
 
