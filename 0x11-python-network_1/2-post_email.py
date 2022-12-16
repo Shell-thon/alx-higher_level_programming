@@ -5,13 +5,13 @@ the header of the response.
 
 
 if __name__ == "__main__":
-    import urllib.request
-    import urllib.parse
-    import sys
+    from urllib.request import urlopen, Request
+    from urllib.parse import urlencode
+    from sys import argv
 
-    value = {"email": sys.argv[2]}
-    request = urllib.request.Request(
-            sys.argv[1], urllib.parse.urlencode().encode("ascii"))
-    with urllib.request.urlopen(request) as response:
+    value = {"email": argv[2]}
+    request = Request(
+            argv[1], urlencode(value).encode("ascii"))
+    with urlopen(request) as response:
         head = response.headers.get('X-Request-Id')
         print(response.read().decode('utf-8'))
