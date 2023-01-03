@@ -66,7 +66,8 @@ The Zen of Python, by Tim Peters:
 - Readability counts.
 - Special cases
 
-**Author: Adejare Michael**
+**Author
+### _Adejare Michael_
 - **Instagram: [shell.terminal]** (instagram.com/shell.terminal)
 - **Facebook: [shell.terminal]** (facebook.com/shell.terminal)
 - **Medium: [Michael]** (medium.com/shell-terminal)
