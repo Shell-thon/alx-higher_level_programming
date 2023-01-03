@@ -68,7 +68,7 @@ The Zen of Python, by Tim Peters:
 
 ## Author
 ### _Adejare Michael_
-- **Instagram: [shell.terminal]** (instagram.com/shell.terminal)
-- **Facebook: [shell.terminal]** (facebook.com/shell.terminal)
-- **Medium: [Michael]** (medium.com/shell-terminal)
-- ** Twitter: [Michael Hacks]** (twitter.com/shellterminal)
+- **Instagram: [shell.terminal]** (https://instagram.com/shell.terminal)
+- **Facebook: [shell.terminal]** (https://facebook.com/shell.terminal)
+- **Medium: [Michael]** (https://medium.com/shell-terminal)
+- **Twitter: [Michael Hacks]** (https://twitter.com/shellterminal)
