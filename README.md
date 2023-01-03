@@ -67,6 +67,7 @@ The Zen of Python, by Tim Peters:
 - Special cases
 
 **Author: Adejare Michael**
-Facebook: facebook.com/shell.terminal
-Medium: medium.com/@shell-terminal
-Twitter: twitter.com/shell_terminal
+- **Instagram: [shell.terminal]** (instagram.com/shell.terminal)
+- **Facebook: [shell.terminal]** (facebook.com/shell.terminal)
+- **Medium: [Michael]** (medium.com/shell-terminal)
+- ** Twitter: [Michael Hacks]** (twitter.com/shellterminal)
