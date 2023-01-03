@@ -71,4 +71,4 @@ The Zen of Python, by Tim Peters:
 [![Instagram](https://img.shields.io/badge/follow%20me%20on-instagram-red)](https://www.instagram.com/shell.terminal)
 [![Twitter](https://img.shields.io/badge/follow%20on-twitter-blue)](https://twitter.com/shell_terminal)
 [![Medium](https://img.shields.io/badge/follow%20on-medium-grey)](https://medium.com/@shell-terminal)
-[![LinkedIn](https://img.shields.io/badge/connect%20on-linkedin-light-blue)](https://www.linkedin.com/in/linkedin.com/in/metromaniageek/)
+[![LinkedIn](https://img.shields.io/badge/connect%20on-linkedin-87CEEB)](https://www.linkedin.com/in/linkedin.com/in/metromaniageek/)
