@@ -1,4 +1,4 @@
-# 0x03. Python - Data Structures: Lists, Tuples
+]# 0x03. Python - Data Structures: Lists, Tuples
 
 ## Resources
 **Read or watch:**
@@ -28,4 +28,4 @@ You are tasked to come up with solutions for the tasks below yourself to meet wi
 You will not be able to meet the objectives of this or any following
 
 ## AUTHOR
-__ Adejare Michael __
+__Adejare Michael__
