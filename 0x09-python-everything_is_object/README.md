@@ -50,7 +50,8 @@ You are tasked to come up with solutions for the tasks below yourself to meet wi
 - No Shebang
 - All your files should end with a new line
 
+## Author
+
 ---
 
-## Author
-* **Michael** [Shell-thon] - (https://github.com/Shell-thon)
+* **Michael** - [Shell-thon](https://github.com/Shell-thon)
