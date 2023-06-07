@@ -1,9 +1,14 @@
 #!/usr/bin/node
+/* reads and prints the contents of a file */
 
 const fs = require('fs');
 
-try {
-  fs.writeFile(process.argv[2], process.argv[3], 'utf8', function (err, result) { if (err) console.log(err); });
-} catch (err) {
-  console.log(err);
-}
+const args = process.argv.slice(2);
+const filepath = args[0];
+const toWrite = args[1];
+
+fs.writeFile(filepath, toWrite, err => {
+  if (err) {
+    console.log(err);
+  }
+});
