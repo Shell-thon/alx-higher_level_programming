@@ -1,17 +1,24 @@
 #!/usr/bin/node
-/*
-    prints the number of movies with Wedge Antilles
-*/
 
 const request = require('request');
+const starWarsUri = process.argv[2];
+let times = 0;
 
-const id = '18';
-const url = process.argv.slice(2)[0];
+request(starWarsUri, function (_err, _res, body) {
+  body = JSON.parse(body).results;
 
-request(url, (err, res, body) => {
-  if (err) console.log(err);
-  const films = JSON.parse(body).results;
-  const wedgeFilms = films.map(film => film.characters)
-    .filter(arr => arr.find(str => str.search(id) !== -1));
-  console.log(wedgeFilms.length);
+  for (let i = 0; i < body.length; ++i) {
+    const characters = body[i].characters;
+
+    for (let j = 0; j < characters.length; ++j) {
+      const character = characters[j];
+      const characterId = character.split('/')[5];
+
+      if (characterId === '18') {
+        times += 1;
+      }
+    }
+  }
+
+  console.log(times);
 });
