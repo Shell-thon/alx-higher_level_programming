@@ -6,5 +6,5 @@ fs.readFile(fileName, 'utf8', function (err, data) {
   if (err) {
     return console.log(err);
   }
-  process.stdout.write(data);
+    process.stdout.write(data);
 });
